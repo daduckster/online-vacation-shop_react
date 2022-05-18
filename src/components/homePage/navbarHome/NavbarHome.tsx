@@ -9,7 +9,7 @@ function NavbarHome() {
       <button type="button" className={styles.link}>Trip Options</button>
       <button type="button" className={styles.basketLink}>
         {' '}
-        <AiOutlineShoppingCart />
+        <AiOutlineShoppingCart className={styles.cartIcn} />
         {' '}
         0
       </button>

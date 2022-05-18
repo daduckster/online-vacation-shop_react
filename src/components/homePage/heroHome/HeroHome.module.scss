@@ -1,1 +1,75 @@
 @import '../../../_variables.scss';
+
+.heroHomeContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 173vmin;
+  background: radial-gradient(142.34% 65.29% at 50% 50%, #FFFFFF 0%, #CFF2FF 34.9%, #C8EAF7 62.5%, #C0E1ED 100%, #C5E7F3 100%);
+}
+
+.headerContainer {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  height: 90vmin;
+  padding: 0 1rem;
+  color: $text;
+
+  .h3Hero {
+    font-size: 6.5vmin;
+    font-weight: 300;
+  }
+
+  .h1Hero {
+    width: 70%;
+    margin-top: 1.5vmin;
+    font-size: 14vmin;
+    font-weight: 700;
+    line-height: 106.5%;
+  }
+}
+
+.startBtn {
+  padding: 0.3rem 2rem;
+  margin-top: 7vmin;
+  border: none;
+  border-radius: 3px;
+  background-color: $red;
+  font-family: 'Poppins', sans-serif;
+  font-size: 5vmin;
+  font-weight: 700;
+  color: $off-white;
+  cursor: pointer;
+}
+
+.houseImg {
+  z-index: 0;
+  position: absolute;
+  width: 130vmin;
+  height: auto;
+  top: 68vmin;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// MOBILE - HORIZONTAL
+@media screen and (max-height: 567px) {
+  .heroHomeContainer {
+    height: 100vmin;
+  }
+
+  .headerContainer {
+    height: 80vmin;
+    padding: 0 2rem;
+  }
+
+  .houseImg {
+    width: 120vmin;
+    height: auto;
+    top: 9vmin;
+    left: 75vmin;
+  }
+}
