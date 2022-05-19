@@ -1,1 +1,97 @@
 @import '../../../_variables.scss';
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// MOBILE
+.durationContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 1rem 0 1rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .stepNumber {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: $accent;
+  }
+
+  .stepName {
+    font-size: 1.4em;
+    font-weight: 700;
+  }
+}
+
+.durationPlateContainer {
+  display: grid;
+  grid-template-areas: 'num expl' 'num btn';
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1rem;
+  align-items: flex-start;
+  margin-top: 3rem;
+  padding: 1rem;
+  box-shadow: 0 0 50px 5px rgba(43, 59, 65, 0.17);
+  border-radius: 3px;
+
+  .numOfDays {
+    grid-area: num;
+    width: fit-content;
+    margin: auto;
+    font-size: 7em;
+    font-weight: 700;
+    color: $text-light;
+    text-align: center;
+    line-height: 100%;
+  }
+
+  .daysSpan {
+    display: block;
+    width: fit-content;
+    margin: auto;
+    font-size: 2rem;
+    font-weight: 700;
+    color: $text;
+    line-height: 100%;
+  }
+
+  .explanationText {
+    grid-area: expl;
+    font-size: 1em;
+  }
+
+  .chooseBtn {
+    grid-area: btn;
+    align-self: flex-end;
+    width: fit-content;
+    padding: 0.3rem 2rem;
+    border: 3px solid $accent;
+    border-radius: 3px;
+    background-color: transparent;
+    font-size: 1.2em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: $text;
+    cursor: pointer;
+  }
+}
+
+.spoilerPlate {
+  margin-top: 5rem;
+  font-size: 1em;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// MOBILE - HORIZONTAL
+@media screen and (max-height: 567px) {
+  .durationContainer {
+    padding: 5rem 3rem 0 3rem;
+  }
+
+  .durationPlateContainer {
+    max-width: 110vmin;
+  }
+}

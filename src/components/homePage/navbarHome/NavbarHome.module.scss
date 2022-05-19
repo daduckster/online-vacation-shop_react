@@ -29,7 +29,7 @@
   padding: 0.1rem 0.4rem;
   border: none;
   border-radius: 3px;
-  background-color: $red;
+  background-color: $accent;
   font-family: 'Poppins', sans-serif;
   font-size: 0.88em;
   color: $off-white;
@@ -38,4 +38,12 @@
 
 .cartIcn {
   font-size: 1.2em;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// MOBILE - HORIZONTAL
+@media screen and (max-height: 567px) {
+  .navContainer {
+    padding: 0.7rem 3rem;
+  }
 }

@@ -1,1 +1,55 @@
 @import '../../_variables.scss';
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// MOBILE
+
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 1rem 0.2rem 1rem;
+  font-size: 0.88em;
+}
+
+.info {
+  text-align: center;
+}
+
+.infoSpan {
+  display: block;
+}
+
+.copyBtn {
+  margin-left: 0.7rem;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 0.9em;
+  color: $text-light;
+  cursor: pointer;
+
+  .copyIcon {
+    margin-left: 0.15rem;
+    font-size: 0.9em;
+  }
+}
+
+.link {
+  color: $text-light;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// MOBILE - HORIZONTAL
+@media screen and (max-height: 567px) {
+  .footerContainer {
+    padding: 4rem 3rem 0.2rem 3rem;
+  }
+
+  .infoSpan {
+    display: initial;
+  }
+}

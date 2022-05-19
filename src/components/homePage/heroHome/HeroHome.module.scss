@@ -1,5 +1,7 @@
 @import '../../../_variables.scss';
 
+//////////////////////////////////////////////////////////////////////////////////////////////
+// MOBILE
 .heroHomeContainer {
   position: relative;
   display: flex;
@@ -25,7 +27,7 @@
   }
 
   .h1Hero {
-    width: 70%;
+    width: 70vmin;
     margin-top: 1.5vmin;
     font-size: 14vmin;
     font-weight: 700;
@@ -38,7 +40,7 @@
   margin-top: 7vmin;
   border: none;
   border-radius: 3px;
-  background-color: $red;
+  background-color: $accent;
   font-family: 'Poppins', sans-serif;
   font-size: 5vmin;
   font-weight: 700;
@@ -63,7 +65,7 @@
 
   .headerContainer {
     height: 80vmin;
-    padding: 0 2rem;
+    padding: 0 3rem;
   }
 
   .houseImg {
