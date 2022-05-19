@@ -5,7 +5,7 @@ function HeroHome() {
   return (
     <section className={styles.heroHomeContainer}>
       <header className={styles.headerContainer}>
-        <h2 className={styles.h3Hero}>Dream Trip?</h2>
+        <h2 className={styles.h2Hero}>Dream Trip?</h2>
         <h1 className={styles.h1Hero}>Make it Yourself!</h1>
         <button type="button" className={styles.startBtn}>START</button>
       </header>

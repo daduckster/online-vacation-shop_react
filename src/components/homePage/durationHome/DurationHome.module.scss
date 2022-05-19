@@ -13,17 +13,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
 
-  .stepNumber {
-    font-size: 1.7rem;
-    font-weight: 700;
-    color: $accent;
-  }
+.stepNumber {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: $accent;
+}
 
-  .stepName {
-    font-size: 1.4em;
-    font-weight: 700;
-  }
+.stepName {
+  font-size: 1.4em;
+  font-weight: 700;
 }
 
 .durationPlateContainer {
@@ -93,5 +93,47 @@
 
   .durationPlateContainer {
     max-width: 110vmin;
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// TABLET
+@media screen and (min-height: 568px) and (min-width: 613px) {
+  .durationContainer {
+    padding: 5rem 1.5rem 0 1.5rem;
+  }
+
+  .stepNumber {
+    font-size: 2em;
+  }
+
+  .stepName {
+    font-size: 1.5em;
+  }
+
+  .durationPlateContainer {
+    grid-template-areas: 'num' 'expl' 'btn';
+    grid-template-columns: auto;
+    align-items: center;
+    row-gap: 1.5rem;
+    width: 30vmin;
+    padding: 1.5rem;
+  }
+
+  .numOfDays {
+    width: auto;
+    margin: 0;
+  }
+
+  .daysSpan {
+    display: inline !important;
+  }
+
+  .explanationText {
+    text-align: center;
+  }
+
+  .chooseBtn {
+    margin: auto;
   }
 }
