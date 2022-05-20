@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './DurationHome.module.scss';
+import styles from './DurationPlate.module.scss';
 
 function DurationPlate() {
   return (

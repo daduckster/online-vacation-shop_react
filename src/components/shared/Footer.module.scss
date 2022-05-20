@@ -53,3 +53,11 @@
     display: initial;
   }
 }
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// TABLET
+@media screen and (min-height: 568px) and (min-width: 613px) {
+  .infoSpan {
+    display: inline;
+  }
+}
