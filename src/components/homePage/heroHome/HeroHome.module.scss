@@ -114,3 +114,41 @@
     left: 32vw;
   }
 }
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// DESKTOP + IPAD PRO HORIZONTAL
+@media screen and (min-height: 568px) and (min-width: 1025px) {
+  .heroHomeContainer {
+    height: 85vmin;
+  }
+
+  .headerContainer {
+    height: 85vmin;
+    margin: 0 calc((95vw - 100vh) / 3);
+    padding: 0 4vmin;
+  }
+
+  .h2Hero {
+    font-size: 3.8vmin;
+  }
+
+  .h1Hero {
+    width: 41vmin;
+    margin-top: 1vmin;
+    font-size: 9vmin;
+  }
+
+  .startBtn {
+    padding: 0.4rem 2.7rem;
+    margin-top: 4vmin;
+    margin-bottom: 16vmin;
+    font-size: calc(0.5rem + 1.5vmin);
+  }
+
+  .houseImg {
+    width: 100vmin;
+    top: 7vmin;
+    left: auto;
+    right: calc((88vw - 100vh) / 3);
+  }
+}

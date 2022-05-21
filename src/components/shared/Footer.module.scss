@@ -9,6 +9,7 @@
   align-items: center;
   padding: 4rem 1rem 0.2rem 1rem;
   font-size: 0.88em;
+  font-weight: 200;
 }
 
 .info {
@@ -26,17 +27,18 @@
   outline: none;
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
-  font-size: 0.9em;
+  font-size: 0.95em;
   color: $text-light;
   cursor: pointer;
 
   .copyIcon {
     margin-left: 0.15rem;
-    font-size: 0.9em;
+    font-size: 1em;
   }
 }
 
 .link {
+  font-weight: 300;
   color: $text-light;
   text-decoration: none;
   cursor: pointer;
@@ -59,5 +61,13 @@
 @media screen and (min-height: 568px) and (min-width: 613px) {
   .infoSpan {
     display: inline;
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// DESKTOP + IPAD PRO HORIZONTAL
+@media screen and (min-height: 568px) and (min-width: 1025px) {
+  .footerContainer {
+    padding: 10vmin 1rem 0.2rem 1rem;
   }
 }
