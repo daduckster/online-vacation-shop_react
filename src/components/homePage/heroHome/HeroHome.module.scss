@@ -87,7 +87,7 @@
     width: fit-content;
     height: 100vmin;
     margin: 0 5vw;
-    padding: 0 1.5rem;
+    padding: 0 1.5rem 12vmin 1.5rem;
     background-color: rgba(255, 254, 252, 0.4);
   }
 
@@ -104,7 +104,6 @@
   .startBtn {
     padding: 0.3rem 2.3rem;
     margin-top: 5vmin;
-    margin-bottom: 12vmin;
     font-size: 3.1vmin;
   }
 
@@ -125,7 +124,7 @@
   .headerContainer {
     height: 85vmin;
     margin: 0 calc((95vw - 100vh) / 3);
-    padding: 0 4vmin;
+    padding: 0 4vmin 16vmin 4vmin;
   }
 
   .h2Hero {
@@ -141,7 +140,6 @@
   .startBtn {
     padding: 0.4rem 2.7rem;
     margin-top: 4vmin;
-    margin-bottom: 16vmin;
     font-size: calc(0.5rem + 1.5vmin);
   }
 

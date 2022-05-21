@@ -1,1 +1,42 @@
 @import '../../_variables.scss';
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// MOBILE
+.navContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  padding: 0.7rem 1rem;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.linksContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// MOBILE - HORIZONTAL
+@media screen and (max-height: 567px) {
+  .navContainer {
+    padding: 0.7rem 3rem;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// TABLET
+@media screen and (min-height: 568px) and (min-width: 613px) {
+  .navContainer {
+    padding: 1rem 1.5rem;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+

@@ -1,1 +1,77 @@
 @import '../../../_variables.scss';
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// MOBILE
+.activityContainer {
+  display: grid;
+  grid-template-areas: 'img' 'head' 'descr' 'btn';
+  gap: 0.5rem;
+  padding-bottom: 3rem;
+  border-bottom: 2px solid $text-light-opacity;
+}
+
+.imgContainer {
+  grid-area: img;
+  height: 60vmin;
+  background-color: lightgray;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.activityHeader {
+  grid-area: head;
+  font-size: 1.2em;
+  font-weight: 700;
+  color: $text-light;
+}
+
+.activityDescription {
+  grid-area: descr;
+  font-weight: 200;
+  font-size: 1em;
+}
+
+.activityBtn {
+  grid-area: btn;
+  width: fit-content;
+  border: none;
+  background-color: transparent;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  color: $accent;
+  cursor: pointer;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// MOBILE - HORIZONTAL
+@media screen and (max-height: 567px) {
+  .activityContainer {
+    grid-template-areas: 'img head' 'img descr' 'img btn';
+    column-gap: 1.5rem;
+  }
+
+  .imgContainer {
+    height: 50vmin;
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// TABLET
+@media screen and (min-height: 568px) and (min-width: 613px) {
+  .activityContainer {
+    grid-template-areas: 'img head' 'img descr' 'img btn';
+    grid-template-columns: 45% auto;
+    column-gap: 1.5rem;
+    padding-bottom: 1.5rem;
+    border: none;
+  }
+
+  .imgContainer {
+    height: 30vmin;
+  }
+}

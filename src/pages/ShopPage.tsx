@@ -1,9 +1,14 @@
 import React from 'react';
+import ActivitiesShop from '../components/shopPage/activitiesShop/ActivitiesShop';
+import Navbar from '../components/shared/Navbar';
+import Footer from '../components/shared/Footer';
 
 function ShopPage() {
   return (
     <div>
-      ShopPage
+      <Navbar />
+      <ActivitiesShop />
+      <Footer />
     </div>
   );
 }

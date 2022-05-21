@@ -1,1 +1,46 @@
 @import '../../../_variables.scss';
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// MOBILE
+.shopContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 1rem 0 1rem;
+}
+
+.daysSelect {
+  margin-left: 0.4rem;
+  padding: 0 0.3rem;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+.activityContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem 0;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// MOBILE - HORIZONTAL
+@media screen and (max-height: 567px) {
+  .shopContainer {
+    padding: 2rem 3rem 0 3rem;
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// TABLET
+@media screen and (min-height: 568px) and (min-width: 613px) {
+  .shopContainer {
+    padding: 2rem 1.5rem 0 1.5rem;
+  }
+
+  .activityContainer {
+    padding: 3rem 0 0 0;
+  }
+}
