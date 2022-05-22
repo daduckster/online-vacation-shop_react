@@ -45,7 +45,12 @@
   font-size: 5vmin;
   font-weight: 700;
   color: $off-white;
+  text-decoration:none;
   cursor: pointer;
+
+  &:hover {
+    transform: scale(0.97);
+  }
 }
 
 .houseImg {
@@ -141,6 +146,10 @@
     padding: 0.5rem 2.7rem;
     margin-top: 4vmin;
     font-size: calc(0.5rem + 1.5vmin);
+
+    &:active {
+      transform: scale(0.94);
+    }
   }
 
   .houseImg {

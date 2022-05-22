@@ -21,6 +21,11 @@
 .deleteIcon {
   width: 4.5vmin;
   height: 4.5vmin;
+
+  &:hover {
+    color: $accent;
+    transform: scale(0.96);
+  }
 }
 
 .itemName {
@@ -46,5 +51,19 @@
 
   .itemName {
     margin-left: 3vmin;
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// DESKTOP + IPAD PRO HORIZONTAL
+@media screen and (min-height: 568px) and (min-width: 1025px) {
+  .basketItemContainer {
+    grid-template-columns: 2.5vmin auto 12vmin;
+  }
+
+  .deleteIcon {
+    &:active {
+      transform: scale(0.96);
+    }
   }
 }

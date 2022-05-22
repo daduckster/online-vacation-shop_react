@@ -45,6 +45,10 @@
   font-size: 1em;
   color: $accent;
   cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////
@@ -85,5 +89,15 @@
 
   .imgContainer {
     height: 100%;
+  }
+
+  .activityDescription {
+    font-size: 0.89em;
+  }
+
+  .activityBtn {
+    &:active {
+      transform: scale(0.96);
+    }
   }
 }

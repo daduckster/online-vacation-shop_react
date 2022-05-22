@@ -19,7 +19,13 @@
   font-family: 'Poppins', sans-serif;
   font-size: 0.88em;
   color: $text;
+  text-decoration: none;
   cursor: pointer;
+
+  &:hover {
+    color: $accent;
+    transform: scale(0.96);
+  }
 }
 
 .basketLink {
@@ -34,6 +40,10 @@
   font-size: 0.88em;
   color: $off-white;
   cursor: pointer;
+
+  &:hover {
+    transform: scale(0.96);
+  }
 }
 
 .cartIcn {
@@ -61,5 +71,17 @@
 @media screen and (min-height: 568px) and (min-width: 1025px) {
   .navContainer {
     padding: 1.5rem calc((95vw - 100vh) / 3);
+  }
+
+  .link {
+    &:active {
+      transform: scale(0.91);
+    }
+  }
+
+  .basketLink {
+    &:active {
+      transform: scale(0.91);
+    }
   }
 }

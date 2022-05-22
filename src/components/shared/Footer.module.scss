@@ -23,6 +23,7 @@
 .copyBtn {
   margin-left: 0.7rem;
   border: none;
+  content: 'Copy Email';
   background-color: transparent;
   outline: none;
   font-family: 'Poppins', sans-serif;
@@ -35,6 +36,18 @@
     margin-left: 0.15rem;
     font-size: 1em;
   }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.copyBtnSuccess {
+  content: 'Email Copied';
+}
+
+.copyBtnFail {
+  content: 'Error.Copy Email manualy';
 }
 
 .link {
@@ -42,6 +55,10 @@
   color: $text-light;
   text-decoration: none;
   cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////
@@ -69,5 +86,17 @@
 @media screen and (min-height: 568px) and (min-width: 1025px) {
   .footerContainer {
     padding: 10vmin 1rem 0.2rem 1rem;
+  }
+
+  .copyBtn {
+    &:active {
+      transform: scale(0.94);
+    }
+  }
+
+  .link {
+    &:active {
+      transform: scale(0.94);
+    }
   }
 }
