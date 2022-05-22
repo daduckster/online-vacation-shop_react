@@ -1,0 +1,50 @@
+@import '../../../_variables.scss';
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// MOBILE
+.basketItemContainer {
+  display: grid;
+  grid-template-columns: 7vmin auto 25vmin;
+  align-items: center;
+}
+
+.deleteBtn {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 0;
+  border: none;
+  background-color: transparent;
+  color: $text-light;
+  cursor: pointer;
+}
+
+.deleteIcon {
+  width: 4.5vmin;
+  height: 4.5vmin;
+}
+
+.itemName {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.priceContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  border-left: 2px solid $text-light-opacity;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// TABLET
+@media screen and (min-height: 568px) and (min-width: 613px) {
+  .basketItemContainer {
+    grid-template-columns: 3vmin auto 13vmin;
+  }
+
+  .itemName {
+    margin-left: 3vmin;
+  }
+}

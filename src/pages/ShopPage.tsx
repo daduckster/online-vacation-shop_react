@@ -5,11 +5,11 @@ import Footer from '../components/shared/Footer';
 
 function ShopPage() {
   return (
-    <div>
+    <article>
       <Navbar />
       <ActivitiesShop />
       <Footer />
-    </div>
+    </article>
   );
 }
 
