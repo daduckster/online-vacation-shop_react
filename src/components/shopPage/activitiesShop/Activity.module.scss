@@ -65,13 +65,25 @@
 @media screen and (min-height: 568px) and (min-width: 613px) {
   .activityContainer {
     grid-template-areas: 'img head' 'img descr' 'img btn';
-    grid-template-columns: 45% auto;
+    grid-template-columns: 40% auto;
     column-gap: 1.5rem;
     padding-bottom: 1.5rem;
     border: none;
   }
 
   .imgContainer {
-    height: 30vmin;
+    height: 14rem;
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// DESKTOP + IPAD PRO HORIZONTAL
+@media screen and (min-height: 568px) and (min-width: 1025px) {
+  .activityContainer {
+    grid-template-columns: 50% auto;
+  }
+
+  .imgContainer {
+    height: 100%;
   }
 }

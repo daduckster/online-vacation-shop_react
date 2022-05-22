@@ -41,6 +41,20 @@
   }
 
   .activityContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     padding: 3rem 0 0 0;
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// DESKTOP + IPAD PRO HORIZONTAL
+@media screen and (min-height: 568px) and (min-width: 1025px) {
+  .shopContainer {
+    padding: 3vmin calc((95vw - 100vh) / 3) 0 calc((95vw - 100vh) / 3);
+  }
+
+  .activityContainer {
+    padding: 4vmin 0 0 0;
   }
 }

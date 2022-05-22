@@ -40,3 +40,10 @@
   }
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////
+// DESKTOP + IPAD PRO HORIZONTAL
+@media screen and (min-height: 568px) and (min-width: 1025px) {
+  .navContainer {
+    padding: 1.5rem calc((95vw - 100vh) / 3);
+  }
+}
