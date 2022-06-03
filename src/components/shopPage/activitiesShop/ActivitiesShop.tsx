@@ -3,8 +3,12 @@ import inhStylesHeroHome from '../../homePage/heroHome/HeroHome.module.scss';
 import inhStylesDurationHome from '../../homePage/durationHome/DurationHome.module.scss';
 import styles from './ActivitiesShop.module.scss';
 import Activity from './Activity';
+import { useAppSelector } from '../../../store/hooks/hooks';
 
 function ActivitiesShop() {
+  const duration = useAppSelector((state) => state.duration.value);
+  const options = [3, 5, 7];
+
   return (
     <article className={styles.shopContainer}>
       <header className={inhStylesDurationHome.header}>
@@ -16,9 +20,12 @@ function ActivitiesShop() {
         <label htmlFor="selectDays">
           Amount of days in your Basic Trip:
           <select name="selectDays" id="selectDays" className={styles.daysSelect}>
-            <option value="3">3</option>
-            <option value="3">5</option>
-            <option value="3">7</option>
+            {options.map((option) => {
+              if (option === duration) {
+                return <option value={option} selected>{option}</option>;
+              }
+              return <option value={option}>{option}</option>;
+            })}
           </select>
         </label>
       </div>

@@ -3,6 +3,12 @@ import DurationPlate from './DurationPlate';
 import styles from './DurationHome.module.scss';
 
 function DurationHome() {
+  const durationData = [
+    { days: 3, price: 75 },
+    { days: 5, price: 118 },
+    { days: 7, price: 153 },
+  ];
+
   return (
     <article id="duration" className={styles.durationContainer}>
       <header className={styles.header}>
@@ -10,9 +16,7 @@ function DurationHome() {
         <h3 className={styles.stepName}>CHOOSE LENGTH OF YOUR TRIP</h3>
       </header>
       <div className={styles.plateWrapper}>
-        <DurationPlate />
-        <DurationPlate />
-        <DurationPlate />
+        {durationData.map((data) => <DurationPlate key={data.days} data={data} />)}
       </div>
       <p className={styles.spoilerPlate}>
         *You can add Extra Options on the next step.
