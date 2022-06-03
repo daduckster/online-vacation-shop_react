@@ -7,7 +7,7 @@ import { useAppSelector } from '../../../store/hooks/hooks';
 
 function ActivitiesShop() {
   const duration = useAppSelector((state) => state.duration.value);
-  const options = [3, 5, 7];
+  const durationOptions = [3, 5, 7];
 
   return (
     <article className={styles.shopContainer}>
@@ -20,7 +20,7 @@ function ActivitiesShop() {
         <label htmlFor="selectDays">
           Amount of days in your Basic Trip:
           <select name="selectDays" id="selectDays" className={styles.daysSelect}>
-            {options.map((option) => {
+            {durationOptions.map((option) => {
               if (option === duration) {
                 return <option value={option} selected>{option}</option>;
               }
