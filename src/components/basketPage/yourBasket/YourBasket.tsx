@@ -3,8 +3,11 @@ import inhStylesDurationHome from '../../homePage/durationHome/DurationHome.modu
 import BasketItem from './BasketItem';
 import styles from './YourBasket.module.scss';
 import inhStylesHeroHome from '../../homePage/heroHome/HeroHome.module.scss';
+import { useAppSelector } from '../../../store/hooks/hooks';
 
 function YourBasket() {
+  const activitiesStorage = useAppSelector((state) => state.chosenActivities.value);
+
   return (
     <section className={styles.yourBasketContainer}>
       <header className={inhStylesDurationHome.header}>
@@ -17,12 +20,16 @@ function YourBasket() {
         <div className={styles.basketSection}>
 
           <div className={styles.basket}>
-            <BasketItem />
-            <BasketItem />
-            <BasketItem />
-            <BasketItem />
-            <BasketItem />
-            <BasketItem />
+            {activitiesStorage.length === 0 && (
+              <p className={styles.emptyBasket}>
+                You did not choose any Trip Options. Your Basket is empty.
+              </p>
+            )}
+            {activitiesStorage.length !== 0 && (
+              activitiesStorage.map((activity) => (
+                <BasketItem key={activity.name} activity={activity} />
+              ))
+            )}
           </div>
         </div>
 

@@ -5,11 +5,11 @@ import inhStylesDurationHome from '../../homePage/durationHome/DurationHome.modu
 import styles from './ActivitiesShop.module.scss';
 import Activity from './Activity';
 import { useAppSelector } from '../../../store/hooks/hooks';
+import activities from './activitiesShopHelper';
 
 function ActivitiesShop() {
   const duration = useAppSelector((state) => state.duration.value);
   const durationOptions = [3, 5, 7];
-
   return (
     <article className={styles.shopContainer}>
       <header className={inhStylesDurationHome.header}>
@@ -32,12 +32,7 @@ function ActivitiesShop() {
       </div>
 
       <div className={styles.activityContainer}>
-        <Activity />
-        <Activity />
-        <Activity />
-        <Activity />
-        <Activity />
-        <Activity />
+        {activities.map((activity) => <Activity key={activity.name} activity={activity} />)}
       </div>
 
       <div className={styles.btnContainer}>

@@ -1,22 +1,28 @@
 import React from 'react';
 import styles from './Activity.module.scss';
+import { ActivityPlate } from '../../../types/activities';
 
-function Activity() {
+interface PropTypes {
+  activity: ActivityPlate
+}
+
+function Activity({ activity }: PropTypes) {
   return (
     <section className={styles.activityContainer}>
       <figure className={styles.imgContainer}>
-        <img src="./assets/images/house.png" alt="house on the beach" className={styles.img} />
+        <img src={activity.src} alt={activity.alt} className={styles.img} />
       </figure>
 
-      <header className={styles.activityHeader}>PARACHUTING</header>
+      <header className={styles.activityHeader}>{activity.name}</header>
 
-      <p className={styles.activityDescription}>
-        Quam justo, pretium donec risus quisque habitasse a eu sed. Viverra maecenas odio dui
-        interdum ullamcorper quis ullamcorper rhoncus.
+      <p className={styles.activityDescription}>{activity.description}</p>
+
+      <button type="button" className={styles.activityBtn}>
+        +Add for
         {' '}
-      </p>
-
-      <button type="button" className={styles.activityBtn}>+ Add for 70chf</button>
+        {activity.price}
+        {activity.currency}
+      </button>
     </section>
   );
 }

@@ -1,0 +1,86 @@
+import { ActivityPlate } from '../../../types/activities';
+
+const activities: ActivityPlate[] = [
+  {
+    name: 'PARACHUTING',
+    description: 'Quam justo, pretium donec risus quisque habitasse a eu sed. Viverra maecenas odio dui interdum ullamcorper quis ullamcorper rhoncus.',
+    price: 70,
+    currency: 'chf',
+    src: './assets/images/parachuting-min.png',
+    alt: 'parachuting person in the sky',
+  },
+  {
+    name: 'CANOEING',
+    description: 'Risus vivamus ultrices vel adipiscing leo vel velit. Tortor suspendisse egestas tempor commodo, nec morbi eget. Neque amet viverra eleifend turpis est.',
+    price: 58,
+    currency: 'chf',
+    src: './assets/images/canoeing-min.png',
+    alt: 'canoeing person in the lake',
+  },
+  {
+    name: 'HORSE RIDE',
+    description: 'Fusce curabitur nec aliquam sollicitudin tempor. Et morbi feugiat convallis id dictum lorem sit viverra. Neque erat massa enim morbi egestas at nulla aliquam.',
+    price: 27,
+    currency: 'chf',
+    src: './assets/images/horse_ride-min.png',
+    alt: 'two people on a horse ride in the forest',
+  },
+  {
+    name: 'BUGGY TRIP',
+    description: 'Sit etiam at donec ac adipiscing amet non non, suscipit. Eget quam ac vivamus enim cursus libero praesent malesuada. Et in odio venenatis arcu ut.',
+    price: 53,
+    currency: 'chf',
+    src: './assets/images/buggy_trip-min.png',
+    alt: 'buggy standing on the hill',
+  },
+  {
+    name: 'BBQ PARTY',
+    description: 'Sed placerat sed sed cum eget facilisis. Ac purus velit tempus enim odio proin. Morbi pellentesque arcu, in nunc, sollicitudin. Odio eleifend iaculis.',
+    price: 19,
+    currency: 'chf',
+    src: './assets/images/bbq_party-min.png',
+    alt: 'people making bbq',
+  },
+  {
+    name: 'SAILING',
+    description: 'Eu mattis odio convallis ut sed neque, sed mattis sed. At volutpat, est facilisi aenean in sapien ultrices vitae. Varius sodales amet venenatis bibendum molestie.',
+    price: 67,
+    currency: 'chf',
+    src: './assets/images/sailing-min.png',
+    alt: 'sailing boat in the sea',
+  },
+  {
+    name: 'BIRD WATCHING',
+    description: 'Ipsum ullamcorper malesuada nulla sed turpis ultricies. Vulputate aenean urna, a at et vitae est. Vestibulum hendrerit urna non libero sed. Sed eu vestibulum.',
+    price: 13,
+    currency: 'chf',
+    src: './assets/images/bird_watching-min.png',
+    alt: 'binnacle lying on a book about birds',
+  },
+  {
+    name: 'HIKE WITH GUIDE',
+    description: 'Ante pellentesque facilisis nibh quis eget. Odio libero, sed et consequat ipsum. Elementum eget nullam at et ornare eget venenatis consectetur augue.',
+    price: 22,
+    currency: 'chf',
+    src: './assets/images/hike_with_guide-min.png',
+    alt: 'hiking person in mountains next to mountain lake',
+  },
+  {
+    name: 'BIKING',
+    description: 'Euismod viverra mi faucibus purus erat varius ipsum gravida est. Lacus id enim mauris, mattis ipsum, euismod. Vitae malesuada facilisis purus pharetra. Ut vitae.',
+    price: 18,
+    currency: 'chf',
+    src: './assets/images/biking-min.png',
+    alt: 'person biking through the forest path',
+  },
+  {
+    name: 'BONFIRE EVENING',
+    description: 'Diam, est, sem nec rhoncus tincidunt. Massa commodo risus aliquam mollis ultrices ornare id. Elementum iaculis elit, amet placerat aliquam. Habitasse.',
+    price: 0,
+    currency: 'chf',
+    src: './assets/images/bonfire_evening-min.png',
+    alt: 'people sitting next to bonfire',
+  },
+];
+
+export default activities;
