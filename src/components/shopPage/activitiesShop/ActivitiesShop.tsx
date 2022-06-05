@@ -1,4 +1,5 @@
 import React from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
 import inhStylesHeroHome from '../../homePage/heroHome/HeroHome.module.scss';
 import inhStylesDurationHome from '../../homePage/durationHome/DurationHome.module.scss';
 import styles from './ActivitiesShop.module.scss';
@@ -40,7 +41,7 @@ function ActivitiesShop() {
       </div>
 
       <div className={styles.btnContainer}>
-        <button type="button" className={inhStylesHeroHome.startBtn}>CALCULATE FINAL PRICE</button>
+        <Link to="/basket" className={inhStylesHeroHome.startBtn}>CALCULATE FINAL PRICE</Link>
       </div>
 
     </article>
