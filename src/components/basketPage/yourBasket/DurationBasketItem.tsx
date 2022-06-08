@@ -8,7 +8,7 @@ function DurationBasketItem() {
   return (
     <div className={styles.durationItemContainer}>
       <p className={styles.durationName}>
-        BASIC TRIP FOR
+        YOUR BASIC TRIP LENGTH IS
         {' '}
         {duration}
         {' '}

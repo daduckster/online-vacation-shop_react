@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Activity.module.scss';
 import { ActivityPlate } from '../../../types/activities';
 import { useAppDispatch } from '../../../store/hooks/hooks';
@@ -9,7 +9,11 @@ interface PropTypes {
 }
 
 function Activity({ activity }: PropTypes) {
+  const [isClicked, setIsClicked] = useState<boolean>(false);
   const dispatch = useAppDispatch();
+  function handleClick() {
+    setIsClicked(true);
+  }
   return (
     <section className={styles.activityContainer}>
       <figure className={styles.imgContainer}>
@@ -20,12 +24,25 @@ function Activity({ activity }: PropTypes) {
 
       <p className={styles.activityDescription}>{activity.description}</p>
 
-      <button type="button" onClick={() => dispatch(addActivity(activity))} className={styles.activityBtn}>
-        +Add for
-        {' '}
-        {activity.price}
-        {activity.currency}
-      </button>
+      {!isClicked && (
+        <button
+          type="button"
+          onClick={() => {
+            dispatch(addActivity(activity));
+            handleClick();
+          }}
+          className={styles.activityBtn}
+        >
+          +Add for
+          {' '}
+          {activity.price}
+          {activity.currency}
+        </button>
+      )}
+      {isClicked && (
+        <p className={styles.activityActive}>Added to Your Basket</p>
+      )}
+
     </section>
   );
 }

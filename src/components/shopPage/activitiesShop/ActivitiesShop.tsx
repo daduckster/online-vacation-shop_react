@@ -4,10 +4,12 @@ import inhStylesHeroHome from '../../homePage/heroHome/HeroHome.module.scss';
 import inhStylesDurationHome from '../../homePage/durationHome/DurationHome.module.scss';
 import styles from './ActivitiesShop.module.scss';
 import Activity from './Activity';
-import { useAppSelector } from '../../../store/hooks/hooks';
+import { useAppSelector, useAppDispatch } from '../../../store/hooks/hooks';
 import activities from './activitiesShopHelper';
+import { setDaysToChosenAmount } from '../../../store/slices/durationSlice';
 
 function ActivitiesShop() {
+  const dispatch = useAppDispatch();
   const duration = useAppSelector((state) => state.duration.value);
   const durationOptions = [3, 5, 7];
   return (
@@ -19,15 +21,13 @@ function ActivitiesShop() {
 
       <div>
         <label htmlFor="selectDays">
-          Amount of days in your Basic Trip:
-          <select name="selectDays" id="selectDays" className={styles.daysSelect}>
-            {durationOptions.map((option) => {
-              if (option === duration) {
-                return <option key={option} value={option} selected>{option}</option>;
-              }
-              return <option key={option} value={option}>{option}</option>;
-            })}
-          </select>
+          Days in your Basic Trip:
+          {durationOptions.map((option) => {
+            if (option === duration) {
+              return <button className={styles.chosenDaysBtn} type="button" key={option}>{option}</button>;
+            }
+            return <button onClick={() => dispatch(setDaysToChosenAmount(option))} className={styles.daysBtn} type="button" key={option}>{option}</button>;
+          })}
         </label>
       </div>
 
@@ -36,7 +36,7 @@ function ActivitiesShop() {
       </div>
 
       <div className={styles.btnContainer}>
-        <Link to="/basket" className={inhStylesHeroHome.startBtn}>CALCULATE FINAL PRICE</Link>
+        <Link to="/basket#" className={inhStylesHeroHome.startBtn}>CALCULATE FINAL PRICE</Link>
       </div>
 
     </article>

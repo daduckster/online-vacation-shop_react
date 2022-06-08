@@ -12,16 +12,16 @@ function Navbar() {
     <nav className={styles.navContainer}>
       <div className={styles.btnContainer}>
         <Link to="/basket" className={inhStyles.basketLink}>
-          <AiOutlineShoppingCart className={styles.cartIcn} />
+          <AiOutlineShoppingCart className={inhStyles.cartIcn} />
           {activitiesInBasket.length}
         </Link>
       </div>
       <div className={styles.linksContainer}>
-        <Link to="/home" className={inhStyles.link}>Home</Link>
+        <Link to="/home#" className={inhStyles.link}>Home</Link>
         <BiRightArrowAlt className={styles.arrowIcon} />
-        <Link to="/shop" className={inhStyles.link}>Trip Options</Link>
+        <Link to="/shop#" className={inhStyles.link}>Trip Options</Link>
         <BiRightArrowAlt className={styles.arrowIcon} />
-        <Link to="/basket" className={inhStyles.link}>Basket</Link>
+        <Link to="/basket#" className={inhStyles.link}>Basket</Link>
       </div>
     </nav>
   );

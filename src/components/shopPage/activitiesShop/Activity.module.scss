@@ -51,6 +51,12 @@
   }
 }
 
+.activityActive {
+  font-weight: 200;
+  color: $text-light;
+  cursor: default;
+}
+
 //////////////////////////////////////////////////////////////////////////////////////////////
 // MOBILE - HORIZONTAL
 @media screen and (max-height: 567px) {
