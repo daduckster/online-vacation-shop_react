@@ -4,14 +4,16 @@ import { BiRightArrowAlt } from 'react-icons/bi';
 import { HashLink as Link } from 'react-router-hash-link';
 import inhStyles from '../../homePage/navbarHome/NavbarHome.module.scss';
 import styles from '../../shared/Navbar.module.scss';
+import { useAppSelector } from '../../../store/hooks/hooks';
 
 function Navbar() {
+  const activitiesInBasket = useAppSelector((state) => state.chosenActivities.value);
   return (
     <nav className={styles.navContainer}>
       <div className={styles.btnContainer}>
         <Link to="/basket" className={inhStyles.basketLink}>
           <AiOutlineShoppingCart className={styles.cartIcn} />
-          0
+          {activitiesInBasket.length}
         </Link>
       </div>
       <div className={styles.linksContainer}>

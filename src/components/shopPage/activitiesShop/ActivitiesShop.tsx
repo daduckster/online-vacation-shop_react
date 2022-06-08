@@ -23,9 +23,9 @@ function ActivitiesShop() {
           <select name="selectDays" id="selectDays" className={styles.daysSelect}>
             {durationOptions.map((option) => {
               if (option === duration) {
-                return <option value={option} selected>{option}</option>;
+                return <option key={option} value={option} selected>{option}</option>;
               }
-              return <option value={option}>{option}</option>;
+              return <option key={option} value={option}>{option}</option>;
             })}
           </select>
         </label>

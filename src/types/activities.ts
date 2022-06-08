@@ -6,3 +6,8 @@ export interface ActivityPlate {
   src: string,
   alt: string,
 }
+
+export interface BasicPrice {
+  days: number;
+  price: number;
+}

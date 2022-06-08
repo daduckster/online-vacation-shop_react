@@ -17,7 +17,8 @@ export const ChosenActivitiesSlice = createSlice({
       state.value = [...state.value, action.payload];
     },
     removeActivity: (state, action: PayloadAction<ActivityPlate>) => {
-      state.value = state.value.filter((activityPlate) => activityPlate !== action.payload);
+      state.value = state.value
+        .filter((activityPlate) => activityPlate.name !== action.payload.name);
     },
   },
 });

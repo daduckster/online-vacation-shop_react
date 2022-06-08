@@ -31,13 +31,19 @@
 }
 
 .basket {
-  min-height: 40vmin;
+  min-height: fit-content;
   padding: 2rem 1rem;
   box-shadow: 0 0 50px 5px rgba(43, 59, 65, 0.17);
 }
 
+.extraOptions {
+  text-align: start;
+  margin-bottom: 2vmin;
+  color: $accent;
+}
+
 .emptyBasket {
-  text-align: center;
+  font-size: 0.88em;
 }
 
 .totalContainer {
@@ -89,7 +95,6 @@
   }
 
   .basket {
-    min-height: 20vmin;
     padding: 2rem 1.5rem;
   }
 
@@ -116,10 +121,6 @@
 
   .basketHeader {
     padding-left: 0;
-  }
-
-  .basket {
-    min-height: 30vmin;
   }
 
   .totalContainer {
