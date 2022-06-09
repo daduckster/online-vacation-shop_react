@@ -8,6 +8,7 @@ import { useAppSelector } from '../../../store/hooks/hooks';
 
 function Navbar() {
   const activitiesInBasket = useAppSelector((state) => state.chosenActivities.value);
+  if (!activitiesInBasket) return null;
   return (
     <nav className={styles.navContainer}>
       <div className={styles.btnContainer}>

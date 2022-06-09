@@ -6,6 +6,8 @@ import { useAppSelector } from '../../../store/hooks/hooks';
 
 function NavbarHome() {
   const activitiesInBasket = useAppSelector((state) => state.chosenActivities.value);
+
+  if (!activitiesInBasket) return null;
   return (
     <nav className={styles.navContainer}>
       <Link to="/home#" className={styles.link}>Home</Link>

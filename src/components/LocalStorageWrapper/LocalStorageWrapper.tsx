@@ -13,9 +13,21 @@ function LocalStorageWrapper({ children }: PropTypes) {
   const localStorageActivities = localStorage.getItem('activities');
   const localStorageChosenActivities = localStorage.getItem('chosenActivities');
   const localStorageDuration = localStorage.getItem('duration');
-  dispatch(updateActivitiesFromLocalStorage(localStorageActivities));
-  dispatch(updateChosenActivitiesFromLocalStorage(localStorageChosenActivities));
-  dispatch(updateDurationFromLocalStorage(localStorageDuration));
+
+  if (localStorageActivities) {
+    const res = JSON.parse(localStorageActivities);
+    dispatch(updateActivitiesFromLocalStorage(res));
+  }
+
+  if (localStorageChosenActivities) {
+    const res = JSON.parse(localStorageChosenActivities);
+    dispatch(updateChosenActivitiesFromLocalStorage(res));
+  }
+
+  if (localStorageDuration) {
+    const res = JSON.parse(localStorageDuration);
+    dispatch(updateDurationFromLocalStorage(res));
+  }
 
   // eslint-disable-next-line no-console
   console.log('hi');

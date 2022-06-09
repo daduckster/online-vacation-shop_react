@@ -12,6 +12,7 @@ function ActivitiesShop() {
   const duration = useAppSelector((state) => state.duration.value);
   const activities = useAppSelector((state) => state.activities.value);
   const durationOptions = [3, 5, 7];
+  console.log('hey', activities);
   return (
     <article className={styles.shopContainer}>
       <header className={inhStylesDurationHome.header}>
@@ -32,13 +33,19 @@ function ActivitiesShop() {
       </div>
 
       <div className={styles.activityContainer}>
-        {activities.map((activity) => <Activity key={activity.name} activity={activity} />)}
+        {
+          activities && Array.isArray(activities)
+            ? (activities.map((activity) => <Activity key={activity.name} activity={activity} />))
+            : <p>Loading activities...</p>
+
+        }
       </div>
 
       <div className={styles.btnContainer}>
         <Link to="/basket#" className={inhStylesHeroHome.startBtn}>CALCULATE FINAL PRICE</Link>
       </div>
 
+      <button type="button" onClick={() => console.log(activities)}>CLICK</button>
     </article>
   );
 }
