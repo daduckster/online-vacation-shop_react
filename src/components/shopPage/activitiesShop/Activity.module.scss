@@ -52,6 +52,8 @@
 }
 
 .activityActive {
+  display: flex;
+  align-items: center;
   font-weight: 200;
   color: $text-light;
   cursor: default;

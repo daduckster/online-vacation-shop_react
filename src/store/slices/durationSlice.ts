@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { updateLocalStorageDuration } from '../../api/storageHandler';
 
 export interface DurationState {
   value: number
@@ -14,9 +15,13 @@ export const durationSlice = createSlice({
   reducers: {
     setDaysToChosenAmount: (state, action: PayloadAction<number>) => {
       state.value = action.payload;
+      updateLocalStorageDuration(state.value);
+    },
+    updateDurationFromLocalStorage: (state, action) => {
+      state.value = action.payload;
     },
   },
 });
 
-export const { setDaysToChosenAmount } = durationSlice.actions;
+export const { setDaysToChosenAmount, updateDurationFromLocalStorage } = durationSlice.actions;
 export default durationSlice.reducer;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import inhStylesDurationHome from '../../homePage/durationHome/DurationHome.module.scss';
 import BasketItem from './BasketItem';
 import styles from './YourBasket.module.scss';
@@ -8,12 +8,18 @@ import DurationBasketItem from './DurationBasketItem';
 import { calculateBasicTripPrice } from './yourBasketHelper';
 
 function YourBasket() {
+  const [isClicked, setIsClicked] = useState<boolean>(false);
   const activitiesStorage = useAppSelector((state) => state.chosenActivities.value);
   const duration = useAppSelector((state) => state.duration.value);
+
   function calculateTotalPrice() {
     const basicTripPrice = calculateBasicTripPrice(duration);
     const activitiesSum = activitiesStorage.reduce((total, activity) => total + activity.price, 0);
     return basicTripPrice + activitiesSum;
+  }
+
+  function handleClick() {
+    setIsClicked(true);
   }
 
   return (
@@ -54,7 +60,9 @@ function YourBasket() {
             shortest terms to confirm details.
           </p>
           <div className={styles.btnContainer}>
-            <button type="button" className={inhStylesHeroHome.startBtn}>CONFIRM TRIP</button>
+            {isClicked
+              ? <button type="button" className={inhStylesHeroHome.startBtn}>TRIP CONFIRMED</button>
+              : <button type="button" onClick={handleClick} className={inhStylesHeroHome.startBtn}>CONFIRM TRIP</button>}
           </div>
         </div>
       </div>

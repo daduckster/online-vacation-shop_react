@@ -5,12 +5,12 @@ import inhStylesDurationHome from '../../homePage/durationHome/DurationHome.modu
 import styles from './ActivitiesShop.module.scss';
 import Activity from './Activity';
 import { useAppSelector, useAppDispatch } from '../../../store/hooks/hooks';
-import activities from './activitiesShopHelper';
 import { setDaysToChosenAmount } from '../../../store/slices/durationSlice';
 
 function ActivitiesShop() {
   const dispatch = useAppDispatch();
   const duration = useAppSelector((state) => state.duration.value);
+  const activities = useAppSelector((state) => state.activities.value);
   const durationOptions = [3, 5, 7];
   return (
     <article className={styles.shopContainer}>

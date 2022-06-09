@@ -5,6 +5,7 @@ export interface ActivityPlate {
   currency: string,
   src: string,
   alt: string,
+  isClicked: boolean;
 }
 
 export interface BasicPrice {
