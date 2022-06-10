@@ -68,6 +68,7 @@
   .activityContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    column-gap: 7vmin;
     padding: 3rem 0 0 0;
   }
 }
@@ -81,5 +82,6 @@
 
   .activityContainer {
     padding: 4vmin 0 5vmin 0;
+    column-gap: 6vmin;
   }
 }
