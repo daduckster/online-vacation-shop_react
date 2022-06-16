@@ -20,7 +20,7 @@ function DurationPlate({ data }:PropTypes) {
       <p className={styles.explanationText}>
         Basic Trip with no Extra Options* for
         {` ${data.price}`}
-        chf
+        CHF
       </p>
       <Link to="/shop#" className={styles.chooseBtn} onClick={() => dispatch(setDaysToChosenAmount(data.days))}>CHOOSE</Link>
     </section>

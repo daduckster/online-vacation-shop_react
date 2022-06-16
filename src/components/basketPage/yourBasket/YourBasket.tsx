@@ -52,7 +52,7 @@ function YourBasket() {
             TOTAL:
             <span className={styles.totalHeaderSpan}>
               {calculateTotalPrice()}
-              chf
+              CHF
             </span>
           </header>
           <p className={styles.totalExplanation}>
